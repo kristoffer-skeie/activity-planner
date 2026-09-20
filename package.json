@@ -1,0 +1,11 @@
+{
+  "name": "activity-planner",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"cd backend/ActivityPlanner.Api && dotnet run\" \"cd frontend && npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
