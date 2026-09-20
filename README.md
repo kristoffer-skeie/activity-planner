@@ -1,71 +1,63 @@
-# Activity Planner
+Activity Planner
 
-A personal activity planner and task manager with calendar views, priority-based
-task sorting, and chore/event tracking. Built to explore full-stack development
-with a strongly-typed backend and a modern frontend.
+A personal activity planner and task manager with calendar views, priority-based task sorting, and chore/event tracking. Built to explore full-stack development with a strongly-typed backend and a modern frontend.
 
-## Status
+Tech Stack
+Backend: ASP.NET Core (C#), Entity Framework Core
+Frontend: React (Vite)
+Database: SQL Server / Azure SQL
+Deployment: Azure App Service (planned)
+Features (MVP)
+ Create, edit, delete, and complete tasks
+ Assign priority levels and categories to tasks
+ Calendar view of tasks by due date
+ Priority-sorted task list view
+Planned Features
+Recurring tasks/chores
+Time-blocking suggestions based on free calendar slots
+Streak tracking for habits/recurring chores
+Reminders/notifications
+Getting Started
+Prerequisites
+.NET SDK (8.0 or later)
+Node.js (18 or later)
+SQL Server (or a local SQLite/Azure SQL instance)
+Quick start (run both backend and frontend together)
 
-🚧 Work in progress — MVP under active development.
+From the project root, install the dev tooling once:
 
-## Tech Stack
+bash
+npm install
 
-- **Backend:** ASP.NET Core (C#), Entity Framework Core
-- **Frontend:** React (Vite)
-- **Database:** SQL Server / Azure SQL
-- **Deployment:** Azure App Service (planned)
+Then start both the backend and frontend with a single command:
 
-## Features (MVP)
+bash
+npm run dev
 
-- [ ] Create, edit, delete, and complete tasks
-- [ ] Assign priority levels and categories to tasks
-- [ ] Calendar view of tasks by due date
-- [ ] Priority-sorted task list view
+This runs the ASP.NET Core API and the React dev server together in one terminal, each labeled and color-coded. Open http://localhost:5173 once both have started.
 
-## Planned Features
+Manual setup (run each separately)
 
-- Recurring tasks/chores
-- Time-blocking suggestions based on free calendar slots
-- Streak tracking for habits/recurring chores
-- Reminders/notifications
+If you'd rather run them in separate terminals (e.g. to see each one's full, unlabeled output):
 
-## Getting Started
-
-### Prerequisites
-
-- [.NET SDK](https://dotnet.microsoft.com/download) (8.0 or later)
-- [Node.js](https://nodejs.org/) (18 or later)
-- SQL Server (or a local SQLite/Azure SQL instance)
-
-### Backend Setup
-
-```bash
+Backend Setup
+bash
 cd backend/ActivityPlanner.Api
 dotnet restore
 dotnet ef database update
 dotnet run
-```
 
-The API will be available at `https://localhost:{port}` with Swagger docs at `/swagger`.
+The API will be available at https://localhost:{port} with Swagger docs at /swagger.
 
-### Frontend Setup
-
-```bash
+Frontend Setup
+bash
 cd frontend
 npm install
 npm run dev
-```
 
-The app will be available at `http://localhost:5173`.
+The app will be available at http://localhost:5173.
 
-## Project Structure
-
-```
+Project Structure
 activity-planner/
 ├── backend/       # ASP.NET Core Web API
 └── frontend/      # React (Vite) client
-```
-
-## License
-
-MIT
